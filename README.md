@@ -1,6 +1,6 @@
 dotfiles
 ========
 
-Editor dotfiles repository.
+Editor dotfiles repository..
 
 
