@@ -1,4 +1,6 @@
 dotfiles
 ========
 
-Setting vim etc...
+Editor dotfiles repository.
+
+
