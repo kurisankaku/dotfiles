@@ -27,6 +27,7 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 
@@ -37,6 +38,8 @@ filetype plugin indent on
 
 colorscheme jellybeans
 syntax on
+set background=dark
+set list listchars=tab:\¦\
 set number         " 行番号を表示する
 set showmatch      " 対応する括弧を強調表示
 set list           " 不可視文字を表示
