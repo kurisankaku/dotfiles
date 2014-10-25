@@ -25,6 +25,8 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
 
 call neobundle#end()
 
@@ -33,6 +35,7 @@ filetype plugin indent on
 " End Neobundle Settings.
 "-------------------------
 
+colorscheme jellybeans
 syntax on
 set number         " 行番号を表示する
 set showmatch      " 対応する括弧を強調表示
@@ -105,7 +108,7 @@ set noerrorbells "エラーメッセージの表示時にビープを鳴ら
 "------------------------------
 
 " ハイライトをESC二回で消す
-nmap <silent> <Esc><Esc> :nohlsearch<CR> 
+nmap <silent> <Esc><Esc> :nohlsearch<CR>
 " Ctrl + hjkl でウィンドウ間を移動
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
