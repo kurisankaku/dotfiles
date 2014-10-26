@@ -30,6 +30,7 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'kana/vim-submode'
+NeoBundle "slim-template/vim-slim"
 
 call neobundle#end()
 
