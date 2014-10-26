@@ -29,6 +29,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'basyura/unite-rails'
+NeoBundle 'kana/vim-submode'
 
 call neobundle#end()
 
@@ -110,6 +111,8 @@ set noerrorbells "エラーメッセージの表示時にビープを鳴ら
 "------------------------------
 "キーをカスタマイズ
 "------------------------------
+"元のキーマップを無効化
+nnoremap s <Nop>
 
 " ハイライトをESC二回で消す
 nmap <silent> <Esc><Esc> :nohlsearch<CR>
@@ -118,11 +121,19 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" Shift + 矢印でウィンドウ間を移動
-nnoremap <S-Left> <C-w><<CR>
-nnoremap <S-Right> <C-w><CR>
-nnoremap <S-Up> <C-w>-<CR>
-nnoremap <S-Down> <C-w>+<CR>
+" 画面サイズを変更
+nnoremap so <C-w>_<C-w>|
+nnoremap sO <C-w>=
+call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
+call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
+call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
+call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
+call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+call submode#map('bufmove', 'n', '', '<', '<C-w><')
+call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+
+
 
 "-------------------------------
 "固有設定
