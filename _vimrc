@@ -28,6 +28,7 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'basyura/unite-rails'
 
 call neobundle#end()
 
