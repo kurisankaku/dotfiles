@@ -46,7 +46,6 @@ set list listchars=tab:\¦\
 set number         " 行番号を表示する
 set showmatch      " 対応する括弧を強調表示
 set list           " 不可視文字を表示
-set nowrap         " 折り返さない
 set ruler          " カーソルが何行目の何列か表示
 set showcmd        " コマンドの一部を表示
 set encoding=utf8  " エンコード"
