@@ -29,6 +29,8 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'kana/vim-submode'
 NeoBundle "slim-template/vim-slim"
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
 
 call neobundle#end()
 
@@ -37,7 +39,8 @@ filetype plugin indent on
 " End Neobundle Settings.
 "-------------------------
 syntax on
-let g:solarized_termcolors=256
+set background=dark
+colorscheme jellybeans
 set list listchars=tab:\¦\
 set number         " 行番号を表示する
 set showmatch      " 対応する括弧を強調表示
