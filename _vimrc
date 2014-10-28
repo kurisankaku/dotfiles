@@ -28,6 +28,7 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'kana/vim-submode'
+NeoBundle "slim-template/vim-slim"
 
 call neobundle#end()
 
@@ -35,7 +36,6 @@ filetype plugin indent on
 "-------------------------
 " End Neobundle Settings.
 "-------------------------
-
 syntax on
 let g:solarized_termcolors=256
 set list listchars=tab:\¦\
@@ -114,19 +114,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" 画面サイズを変更
-nnoremap so <C-w>_<C-w>|
-nnoremap sO <C-w>=
-call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
-call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
-call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
-call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
-call submode#map('bufmove', 'n', '', '>', '<C-w>>')
-call submode#map('bufmove', 'n', '', '<', '<C-w><')
-call submode#map('bufmove', 'n', '', '+', '<C-w>+')
-call submode#map('bufmove', 'n', '', '-', '<C-w>-')
-
-
 
 "-------------------------------
 "固有設定
