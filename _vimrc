@@ -31,7 +31,7 @@ NeoBundle 'kana/vim-submode'
 NeoBundle "slim-template/vim-slim"
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
-
+NeoBundle 'thoughtbot/vim-rspec'
 call neobundle#end()
 
 filetype plugin indent on
@@ -120,6 +120,12 @@ nnoremap <C-l> <C-w>l
 " NERDTreeを開く
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+"Rspec用ショートカット"
+map <Leader>c :call RunCurrentSpecFile()<CR>
+map <Leader>n :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "!bundle exec rspec -c {spec}"
 "-------------------------------
 "固有設定
 "-------------------------------
