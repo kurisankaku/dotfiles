@@ -32,6 +32,7 @@ NeoBundle "slim-template/vim-slim"
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'yonchu/accelerated-smooth-scroll'
 call neobundle#end()
 
 filetype plugin indent on
@@ -174,3 +175,14 @@ function! ExecuteNERDTree()
   endif
 endfunction
 "noremap <c-e> :<c-u>:call ExecuteNERDTree()<cr>
+""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""
+" accelerated-smooth-scroll
+""""""""""""""""""""""""""""""""""
+" <C-d>/<C-u> 時のスリープ時間 (msec) : 小さくするとスクロールが早くなります。
+" " Default : 10
+let g:ac_smooth_scroll_du_sleep_time_msec = 5
+" <C-f>/<C-b> 時のスリープ時間 (msec) : 小さくするとスクロールが早くなります。
+" " Default : 10
+let g:ac_smooth_scroll_fb_sleep_time_msec = 5
