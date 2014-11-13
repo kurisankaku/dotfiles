@@ -117,8 +117,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" NERDTreeを開く
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 "Rspec用ショートカット"
 map <Leader>c :call RunCurrentSpecFile()<CR>
@@ -175,4 +173,4 @@ function! ExecuteNERDTree()
     let g:nerdstatus = 1
   endif
 endfunction
-noremap <c-e> :<c-u>:call ExecuteNERDTree()<cr>
+"noremap <c-e> :<c-u>:call ExecuteNERDTree()<cr>
