@@ -33,6 +33,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'yonchu/accelerated-smooth-scroll'
+NeoBundle 'jistr/vim-nerdtree-tabs'
 call neobundle#end()
 
 filetype plugin indent on
@@ -121,10 +122,17 @@ nnoremap <C-l> <C-w>l
 
 "Rspec用ショートカット"
 map <Leader>c :call RunCurrentSpecFile()<CR>
-map <Leader>n :call RunNearestSpec()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "!bundle exec rspec -c {spec}"
+
+"タブの移動"
+nnoremap <C-n> gt
+nnoremap <C-p> gT
+
+"NerdTreeTabsトグル用"
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 "-------------------------------
 "固有設定
 "-------------------------------
