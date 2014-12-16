@@ -25,7 +25,6 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'kana/vim-submode'
 NeoBundle "slim-template/vim-slim"
