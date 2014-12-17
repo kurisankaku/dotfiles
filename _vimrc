@@ -33,6 +33,7 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'yonchu/accelerated-smooth-scroll'
 NeoBundle 'jistr/vim-nerdtree-tabs'
+NeoBundle 'scrooloose/syntastic'
 call neobundle#end()
 
 filetype plugin indent on
