@@ -1,6 +1,6 @@
-[submodule "/Users/kuriyama/setting/dotfiles/neobundle"]
-	path = /Users/kuriyama/setting/dotfiles/neobundle
-	url = https://github.com/Shougo/neobundle.vim
-[submodule "/Users/kuriyama/setting/dotfiles/vimproc"]
-	path = /Users/kuriyama/setting/dotfiles/vimproc
-	url = https://github.com/Shougo/vimproc
+[submodule ".vim/bundle/neobundle.vim"]
+	path = .vim/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git
+[submodule ".vim/bundle/vimproc.vim"]
+	path = .vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
