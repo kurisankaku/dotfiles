@@ -34,6 +34,7 @@ NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'yonchu/accelerated-smooth-scroll'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'mattn/emmet-vim'
 call neobundle#end()
 
 filetype plugin indent on
@@ -172,3 +173,4 @@ let g:ac_smooth_scroll_du_sleep_time_msec = 5
 " <C-f>/<C-b> 時のスリープ時間 (msec) : 小さくするとスクロールが早くなります。
 " " Default : 10
 let g:ac_smooth_scroll_fb_sleep_time_msec = 5
+let g:rspec_command = "! bundle exec rspec -c {spec}"
