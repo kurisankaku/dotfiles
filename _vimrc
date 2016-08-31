@@ -43,6 +43,9 @@ NeoBundle 'yonchu/accelerated-smooth-scroll'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 call neobundle#end()
 
 filetype plugin indent on
@@ -103,7 +106,7 @@ set smartindent   " 改行時に入力された行の末尾に合わせて次の
 " OSのクリップボードをレジスタ指定無しで Yank, Put 出来るようにする
 set clipboard=unnamed,unnamedplus
 " マウスの入力を受け付ける
-set mouse=a
+" set mouse=a
 
 " コマンドラインの設定
 
@@ -182,3 +185,8 @@ let g:ac_smooth_scroll_du_sleep_time_msec = 5
 " " Default : 10
 let g:ac_smooth_scroll_fb_sleep_time_msec = 5
 let g:rspec_command = "! bundle exec rspec -c {spec}"
+
+""""""""""""""""""""""""""""""""
+" Vim Markdown
+""""""""""""""""""""""""""""""""
+let g:vim_markdown_folding_disabled = 1
