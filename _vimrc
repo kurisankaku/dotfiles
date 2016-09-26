@@ -42,10 +42,15 @@ NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'yonchu/accelerated-smooth-scroll'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'othree/yajs.vim'
+NeoBundle 'maxmellon/vim-jsx-pretty'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'othree/es.next.syntax.vim'
 call neobundle#end()
 
 filetype plugin indent on
@@ -121,9 +126,25 @@ set history=10000
 set visualbell t_vb=
 set noerrorbells "エラーメッセージの表示時にビープを鳴ら
 
-"rubocopの自動実行設定"
+"lintの自動実行設定"
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['javascript'], 'passive_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
+" エラー行に sign を表示
+let g:syntastic_enable_signs = 1
+" location list を常に更新
+let g:syntastic_always_populate_loc_list = 0
+" location list を常に表示
+let g:syntastic_auto_loc_list = 0
+
+" vim-jsx用の設定
+let g:jsx_ext_required = 1        " ファイルタイプがjsxのとき読み込む．
+let g:jsx_pragma_required = 0     " @から始まるプラグマでは読み込まない．
+augroup Vimrc
+  autocmd!
+  autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END
+
 "------------------------------
 "キーをカスタマイズ
 "------------------------------
