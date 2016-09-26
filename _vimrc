@@ -47,10 +47,9 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'othree/yajs.vim'
-NeoBundle 'maxmellon/vim-jsx-pretty'
-NeoBundle 'othree/javascript-libraries-syntax.vim'
-NeoBundle 'othree/es.next.syntax.vim'
+" NeoBundle 'maxmellon/vim-jsx-pretty'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'isRuslan/vim-es6'
 call neobundle#end()
 
 filetype plugin indent on
