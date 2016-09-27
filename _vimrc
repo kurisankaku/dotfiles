@@ -47,7 +47,6 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
-" NeoBundle 'maxmellon/vim-jsx-pretty'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'isRuslan/vim-es6'
 call neobundle#end()
@@ -126,7 +125,7 @@ set visualbell t_vb=
 set noerrorbells "エラーメッセージの表示時にビープを鳴ら
 
 "lintの自動実行設定"
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['javascript'], 'passive_filetypes': ['ruby'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': ['ruby', 'javascript'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
 " エラー行に sign を表示
