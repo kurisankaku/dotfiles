@@ -6,50 +6,36 @@ set nocompatible
 
 " 一旦ファイルタイプ関連を無効化
 filetype off
-" neobundleでプラグインを管理
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-call neobundle#begin(expand('~/.vim/bundle'))
-NeoBundle 'Shougo/neobundle.vim'
-" 以下のプラグインをバンドル
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-NeoBundle 'VimClojure'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'jpalardy/vim-slime'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-scripts/AnsiEsc.vim'
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'basyura/unite-rails'
-NeoBundle 'kana/vim-submode'
-NeoBundle "slim-template/vim-slim"
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'thoughtbot/vim-rspec'
-NeoBundle 'yonchu/accelerated-smooth-scroll'
-NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'isRuslan/vim-es6'
-call neobundle#end()
+" plugでプラグインを管理
+call plug#begin('~/.vim/plugged')
+
+Plug 'VimClojure'
+Plug 'Shougo/vimshell'
+Plug 'jpalardy/vim-slime'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-rails'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/AnsiEsc.vim'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'basyura/unite-rails'
+Plug 'kana/vim-submode'
+Plug 'slim-template/vim-slim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'ujihisa/unite-colorscheme'
+Plug 'thoughtbot/vim-rspec'
+Plug 'yonchu/accelerated-smooth-scroll'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/syntastic'
+Plug 'pmsorhaindo/syntastic-local-eslint.vim'
+Plug 'mattn/emmet-vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'kannokanno/previm'
+Plug 'tyru/open-browser.vim'
+Plug 'mxw/vim-jsx'
+Plug 'isRuslan/vim-es6'
+" Add plugins to &runtimepath
+call plug#end()
 
 filetype plugin indent on
 "-------------------------
