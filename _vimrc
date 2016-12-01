@@ -33,7 +33,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
 Plug 'mxw/vim-jsx'
-Plug 'isRuslan/vim-es6'
+Plug 'othree/yajs.vim'
 " Add plugins to &runtimepath
 call plug#end()
 
