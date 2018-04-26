@@ -38,6 +38,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'othree/yajs.vim'
+Plug 'tpope/vim-fugitive'
 " Add plugins to &runtimepath
 call plug#end()
 
