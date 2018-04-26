@@ -34,6 +34,9 @@ Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
 Plug 'mxw/vim-jsx'
 Plug 'isRuslan/vim-es6'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -111,8 +114,9 @@ set visualbell t_vb=
 set noerrorbells "エラーメッセージの表示時にビープを鳴ら
 
 "lintの自動実行設定"
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': ['ruby', 'javascript'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': ['ruby', 'javascript', 'go'] }
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_go_checkers = ['go', 'golint']
 let g:syntastic_javascript_checkers = ['eslint']
 " エラー行に sign を表示
 let g:syntastic_enable_signs = 1
@@ -124,6 +128,9 @@ let g:syntastic_auto_loc_list = 0
 " vim-jsx用の設定
 let g:jsx_ext_required = 1        " ファイルタイプがjsxのとき読み込む．
 let g:jsx_pragma_required = 0     " @から始まるプラグマでは読み込まない．
+
+" vim-go用の設定
+let g:go_fmt_autosave = 0 " 保存時にフォーマットを行わない
 augroup Vimrc
   autocmd!
   autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
