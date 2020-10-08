@@ -9,7 +9,6 @@ filetype off
 " plugでプラグインを管理
 call plug#begin('~/.vim/plugged')
 
-Plug 'VimClojure'
 Plug 'Shougo/vimshell'
 Plug 'jpalardy/vim-slime'
 Plug 'scrooloose/nerdtree'
@@ -39,6 +38,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'othree/yajs.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim'
 " Add plugins to &runtimepath
 call plug#end()
 
